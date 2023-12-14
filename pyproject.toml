@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "peggo-prometheus-exporter"
+version = "0.1.0"
+description = "Prometheus exporter for Injective-Peggo"
+authors = ["Dylan Schultz <9121234+dylanschultzie@users.noreply.github.com>"]
+license = "APL2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+prometheus-client = "^0.19.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+ruff = "^0.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120

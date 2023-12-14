@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  peggo_prometheus_exporter:
+    build:
+      context: .
+      args:
+        - "HTTP_PORT=${HTTP_PORT}"
+    env_file:
+      - ".env"
+    ports:
+      - "${HTTP_PORT}:${HTTP_PORT}"
