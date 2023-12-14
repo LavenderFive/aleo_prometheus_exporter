@@ -1,5 +1,5 @@
-# peggo_prometheus_exporter
-Custom Prometheus Exporter for Injective's Peggo bridge.
+# aleo_prometheus_exporter
+Custom Prometheus Exporter for Aleo. Inspired by [DSVR's Aleo Exporter](https://github.com/dsrvlabs/aleo_exporter).
 
 ## Prerequisites
 - Docker
@@ -22,15 +22,11 @@ Custom Prometheus Exporter for Injective's Peggo bridge.
 ## Setup
 1. Clone this repository:
 ```sh
-git clone https://github.com/yourusername/peggo_prometheus_exporter.git
-```
-
-2. Navigate to the project directory:
-```sh
+git clone https://github.com/yourusername/aleo_prometheus_exporter.git
 cd peggo_prometheus_exporter
 ```
 
-3. Copy the a .env.sample file and fill in the variables.
+2. Copy the a .env.sample file and fill in the variables.
 ```sh
 mv .env.sample .env
 ```
@@ -42,5 +38,5 @@ docker-compose up -d
 ```
 2. The Prometheus Exporter should now be running on the specified HTTP_PORT.
 ```sh
-curl localhost:9910
+curl localhost:9911
 ```
