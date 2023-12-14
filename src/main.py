@@ -36,13 +36,12 @@ def request(url: str, endpoint: str):
 
 
 def process_request(node_url: str):
-
     latest_height = int(request(node_url, "latest/height"))
     ALEO_LATEST_HEIGHT.set(latest_height)
-    
+
     peer_count = int(request(node_url, "peers/count"))
     ALEO_PEER_COUNT.set(peer_count)
-    
+
     latest_block_response = json.loads(request(node_url, "latest/block"))
     if latest_block_response is math.nan:
         ALEO_COINBASE_TARGET.set(latest_block_response)
@@ -54,7 +53,7 @@ def process_request(node_url: str):
         ALEO_NETWORK_ID.set(latest_block_response)
         ALEO_PROOF_TARGET.set(latest_block_response)
         ALEO_TIMESTAMP.set(latest_block_response)
-    else: 
+    else:
         munched = munchify(latest_block_response)
         metadata = munched.header.metadata
 
